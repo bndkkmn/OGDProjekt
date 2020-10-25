@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="https://d3js.org/d3.v5.js"></script>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/custom.css">
+
+        <title>Ständige ausländische Wohnbevölkerung des Kantons Thurgau nach Gemeinden und Staatsangehörigkeit 2015-2019</title>
+
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <p>Ständige ausländische Wohnbevölkerung des Kantons Thurgau nach Gemeinden und Staatsangehörigkeit 2015-2019</p>
+                <img src="img/Wappen_Thurgau_matt.svg" height="100px">
+            </header>
+            <main>
+                <div class="desc">Auf dieser Seite kann man die OGD Daten des Thurgaus bezüglich der ausländischen Wohnbevölkerung ansehen. Dies wurde als kleines Schulprojekt erstellt. Auf der Karte kann man auswählen, von welcher Gemeinde man die Daten ansehen möchte.</div>
+                <svg id="map" width="960" height="500">
+                </svg>
+                <div class="tooltip"></div>
+                <div class="slidecontainer">
+                    <p id="yearDisplay">Jahr: 2019</p>
+                    <input type="range" min="2015" max="2019" value="2019" class="rangeInput" id="yearInput" oninput="yearChange(this)">
+                </div>
+                <div id="details">
+                    <div id="dataDisplay"></div>
+                    <div id="chart"></div>
+                </div>
+            </main>
+        </div>
+        <!-- Optional JavaScript -->
+        <script src="js/custom.js"></script>
+        <script src="js/chart.js"></script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>
